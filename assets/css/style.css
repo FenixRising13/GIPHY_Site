@@ -1,0 +1,31 @@
+body {
+    /* Image from https://subtlepatterns.com */
+    background-image: url("../images/blackorchid.png");
+    
+}
+
+div {
+    margin-left: 30px;
+    
+}
+
+.btn {
+    background: black;
+    color: white;
+    border: 2px solid red;
+}
+
+button {
+    margin-left: 30px;
+    
+}
+
+footer {
+    background: black;
+    border-top: 3px solid red;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px;
+}
