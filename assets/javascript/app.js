@@ -49,7 +49,6 @@ $(document).ready(function () {
 
         })
 
-
     })
 
     // Function for rendering buttons *Whoa*
@@ -69,10 +68,10 @@ $(document).ready(function () {
 
         }
     }
-    // Calls function renderButtons()
+    // Calls function renderButtons() to load buttons from existing array.
     renderButtons()
 
-    // Submit will log the value enterered into the form and then renderButtons will create a button for it.
+    // Submit will add the value entered into the array and then renderButtons will create a button for it.
     $("#submit").on("click", function (event) {
         // event.preventDefault() prevents the form from trying to submit itself.
         // We're using a form so that the user can hit enter instead of clicking the button if they want
