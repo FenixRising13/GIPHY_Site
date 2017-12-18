@@ -4,6 +4,11 @@ body {
     
 }
 
+a:hover {
+    background: white;
+    color: black;
+}
+
 .main {
     margin-top: 20px;
 }
@@ -28,7 +33,7 @@ label {
 }
 
 .form-control {
-    width:60%;
+    width:50%;
 }
 
 #submit {

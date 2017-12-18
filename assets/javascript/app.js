@@ -1,15 +1,20 @@
-// An array storing pre-determined horror icons.
+// Document ready function executes once the page is fully loaded.
 $(document).ready(function () {
-
+// This is the array of horror icons that will be appended by the submit.
     var horrorIcon = ["jason", "chucky", "freddy krueger"];
 
 
     // When an "icon" button is clicked, it should run the AJAX call for the API
-    $(".icon").on("click", function () {
+    // and populate the gif images on the page.
+    $(document).on("click", ".icon", function () {
 
-        newButton = ("hamster");
+        $(".gifs").empty();
+
+        console.log("Dynamic button clicked");
+        //------------------ Plugged in a value for now------------------------------
+        btnText = $(this).attr("data-name");
         // AJAX Call for pulling data from GIPHY
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + newButton + "&limit=20&api_key=YVYenRV6DNvcFzei71GxTtitudGD05R5";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + btnText + "&rating=pg-13&limit=20&api_key=YVYenRV6DNvcFzei71GxTtitudGD05R5";
         // Console log the QueryURL to insure it's correct ~ thanksJodi
         console.log(queryURL);
         // Console log the response to see the JSON format
@@ -37,14 +42,18 @@ $(document).ready(function () {
                 var resultsImage = $("<img>");
 
                 // Setting the src attribute of the image to a property pulled off the result item
-                resultsImage.attr("src", results[i].images.fixed_height.url);
+                resultsImage.addClass("gif");
+                resultsImage.attr("src", results[i].images.fixed_height_still.url);
+                resultsImage.attr("status", "still");
+                resultsImage.attr("still-image", results[i].images.fixed_height_still.url);
+                resultsImage.attr("animate-image", results[i].images.fixed_height.url);
 
                 // Appending the paragraph and image tag to the resultsDiv
                 resultsDiv.append(p);
                 resultsDiv.append(resultsImage);
 
                 // Prepends resultsDiv to HTML page in the "#gifs" div
-                $(".dynBtns").prepend(resultsDiv);
+                $(".gifs").append(resultsDiv);
             }
 
         })
@@ -83,5 +92,18 @@ $(document).ready(function () {
         horrorIcon.push(icon);
         // calls renderButtons again!!!
         renderButtons();
+    });
+
+    $(document).on("click", ".gif", function () {
+        console.log(".gif");
+        if ($(this).attr("status") == "still") {
+
+            $(this).attr("src",$(this).attr("animate-image"));
+            $(this).attr("status", "animated");
+        }
+        else {
+            $(this).attr("src",$(this).attr("still-image"));
+            $(this).attr("status", "still");
+        }
     });
 })
