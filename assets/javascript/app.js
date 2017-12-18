@@ -1,7 +1,7 @@
 // Document ready function executes once the page is fully loaded.
 $(document).ready(function () {
 // This is the array of horror icons that will be appended by the submit.
-    var horrorIcon = ["jason", "chucky", "freddy krueger"];
+    var horrorIcon = ["jason", "chucky", "michael myers"];
 
 
     // When an "icon" button is clicked, it should run the AJAX call for the API
@@ -52,7 +52,7 @@ $(document).ready(function () {
                 resultsDiv.append(p);
                 resultsDiv.append(resultsImage);
 
-                // Prepends resultsDiv to HTML page in the "#gifs" div
+                // Appends resultsDiv to HTML page in the "#gifs" div
                 $(".gifs").append(resultsDiv);
             }
 
@@ -63,15 +63,15 @@ $(document).ready(function () {
     // Function for rendering buttons *Whoa*
     function renderButtons() {
         // Removes existing buttons
-        $(".dynBtns").empty();
+        $("#dynBtns").empty();
         // For Loop for parsing horrorIcon array.... I've been avoiding these.
         for (var i = 0; i < horrorIcon.length; i++) {
 
             var Btn = $("<button>");
-            Btn.addClass("icon btn btn-primary");
+            Btn.addClass("icon btn");
             Btn.attr("data-name", horrorIcon[i]);
             Btn.text(horrorIcon[i]);
-            $(".dynBtns").append(Btn);
+            $("#dynBtns").append(Btn);
 
             console.log(horrorIcon[i]);
 
@@ -94,6 +94,7 @@ $(document).ready(function () {
         renderButtons();
     });
 
+    // On click for images to change status between still and animated.
     $(document).on("click", ".gif", function () {
         console.log(".gif");
         if ($(this).attr("status") == "still") {

@@ -1,58 +1,58 @@
+html, body {
+    height: 100%;
+}
+
 body {
     /* Image from https://subtlepatterns.com */
     background-image: url("../images/blackorchid.png");
-    
+    display: flex;
+    flex-direction: column;
 }
 
-a:hover {
-    background: white;
-    color: black;
+container {
+    flex: 1 0 auto;
 }
 
-.main {
-    margin-top: 20px;
-}
-
-div {
-    margin-left: 30px;
-    
+#dynBtns {
+    margin-left: 15px;
+    margin-top: 10px;
 }
 
 .icon {
-    margin-left: 15px;
+    margin-left: 5px;
+    margin-bottom: 5px;
 }
 
 .btn {
     background: black;
     color: white;
-    border: 2px solid red;
+    border: 1px solid red;
+}
+
+.form-control {
+    width: 60%;
 }
 
 label {
     color:white;
-}
-
-.form-control {
-    width:50%;
+    font-weight: normal;
 }
 
 #submit {
     background: black;
     color: white;
-    border: 2px solid red;
-}
-
-button {
-    margin-left: 30px;
-    
+    border: 1px solid red;
 }
 
 footer {
     background: black;
-    border-top: 3px solid red;
+    border-top: 2px solid red;
     height: 40px;
-    position: absolute;
     bottom: 0px;
     width: 100%;
     padding: 10px;
+}
+
+audio {
+    float: right;
 }

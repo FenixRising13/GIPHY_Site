@@ -28,33 +28,37 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="dynBtns">
+    <container>
+        
+        <div id = "dynBtns" class="row">
         </div>
-        <div class="gifs">
-        </div>
-        <br>
-        <form class= bs action="submit">
-            <div class="form-group">
-                <label>Type in a Horror Icon</label>
-                <input type="text" class="form-control" id="horror" placeholder="Your greatest fears are here...">
-            </div>
 
-            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <div class= "row">
+            <div class="gifs col-xs-7 col-sm-7 col-md-8 col-lg-8">
+            </div>
+            <form action="submit" class= "col-xs-5 col-sm-5 col-md-4 col-lg-4">
+                <div class="form-group">
+                    <label>Type in a Horror Icon</label>
+                    <input type="text" class="form-control" id="horror" placeholder="Your greatest fears are here...">
+                </div>
+
+                <button type="submit" id="submit" class="btn">Submit</button>
+            </form>
+        </div>
 
         <!-- Links app.js -->
         <script src="assets/javascript/app.js"></script>
 
-        <footer class="footer">
-            <p class="text-muted text-muted-footer text-center">
-                &copy; Copyright 2017 Mark Powalisz
-                <!-- <audio src="" controls autoplay loop> -->
-                <!-- <p>If you are reading this, it is because your browser does not support the audio element.</p> -->
-                </audio>
-            </p>
-        </footer>
-    </div>
+    </container>
+
+    <footer class="footer">
+        <p class="text-muted text-muted-footer text-center">
+            &copy; Copyright 2017 Mark Powalisz
+            <audio src="assets/music/friday_the_13th.mp3" controls autoplay loop>
+            </audio>
+        </p>
+    </footer>
+
 </body>
 
 </html>
