@@ -52,8 +52,8 @@ $(document).ready(function () {
                 resultsDiv.append(p);
                 resultsDiv.append(resultsImage);
 
-                // Appends resultsDiv to HTML page in the "#gifs" div
-                $(".gifs").append(resultsDiv);
+                // Prepends resultsDiv to HTML page in the "#gifs" div
+                $(".gifs").prepend(resultsDiv);
             }
 
         })
