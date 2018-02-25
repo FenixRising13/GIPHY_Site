@@ -1,2 +1,13 @@
 # GIPHY_Site
-This is the week 4 homework for Monday, December 18th.
+This web app uses the GIPHY API to allow users to view GIFs of horror icons
+
+## Prerequisites
+
+## Built With
+* HTML
+* CSS
+* JavaScript
+* jQuery
+
+## Author
+Mark Powalisz
