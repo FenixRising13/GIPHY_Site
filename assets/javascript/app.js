@@ -1,6 +1,6 @@
 // Document ready function executes once the page is fully loaded.
 $(document).ready(function () {
-// This is the array of horror icons that will be appended by the submit.
+    // This is the array of horror icons that will be appended by the submit.
     var horrorIcon = ["jason", "chucky", "michael myers"];
 
 
@@ -99,11 +99,10 @@ $(document).ready(function () {
         console.log(".gif");
         if ($(this).attr("status") == "still") {
 
-            $(this).attr("src",$(this).attr("animate-image"));
+            $(this).attr("src", $(this).attr("animate-image"));
             $(this).attr("status", "animated");
-        }
-        else {
-            $(this).attr("src",$(this).attr("still-image"));
+        } else {
+            $(this).attr("src", $(this).attr("still-image"));
             $(this).attr("status", "still");
         }
     });
