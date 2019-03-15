@@ -90,7 +90,7 @@ $(document).ready(function() {
 
   // On click for images to change status between still and animated.
   $(document).on("click", ".gif", function() {
-    if ($(this).attr("status") == "still") {
+    if ($(this).attr("status") === "still") {
       $(this).attr("src", $(this).attr("animate-image"));
       $(this).attr("status", "animated");
     } else {
