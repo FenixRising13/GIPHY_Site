@@ -11,7 +11,7 @@ In order to utilize the GIPHY API, a developer should register for their own API
 - HTML
 - CSS
 - JavaScript
-- jQuery
+- jQuery - [Link](https://jquery.com)
 
 ## Built With
 
