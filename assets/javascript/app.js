@@ -23,8 +23,6 @@ $(document).ready(function() {
       method: "GET"
       // I hereby promise I won't use the response until I have a response
     }).done(function(response) {
-      // Console log the response to see the JSON format
-      console.log(response);
       // Drill down one level into our response
       var results = response.data;
       // and now we're in an object with multiple parameters
