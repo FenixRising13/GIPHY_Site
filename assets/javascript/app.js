@@ -1,7 +1,7 @@
 // Document ready function executes once the page is fully loaded.
 $(document).ready(function() {
   // This is the array of horror icons that will be appended by the submit.
-  var horrorIcon = ["jason", "chucky", "michael myers"];
+  var horrorIcon = ["jason voorhees", "chucky", "michael myers"];
 
   // When an "icon" button is clicked, it should run the AJAX call for the API
   // and populate the gif images on the page.
@@ -14,7 +14,7 @@ $(document).ready(function() {
     var queryURL =
       "https://api.giphy.com/v1/gifs/search?q=" +
       btnText +
-      "&rating=pg-13&limit=20&api_key=YVYenRV6DNvcFzei71GxTtitudGD05R5";
+      "&rating=pg&limit=20&api_key=YVYenRV6DNvcFzei71GxTtitudGD05R5";
 
     // Console log the response to see the JSON format
 
@@ -31,7 +31,9 @@ $(document).ready(function() {
         var resultsDiv = $("<div>");
 
         // Creating a paragraph tag with the result's rating
-        var p = $("<p>").text("Rating: " + results[i].rating);
+        var p = $("<p>");
+        p.text("Rating: " + results[i].rating.toUpperCase());
+        p.addClass("rating ml-2");
 
         // Creating and storing the img for HTML
         var resultsImage = $("<img>");
@@ -47,8 +49,8 @@ $(document).ready(function() {
         resultsImage.attr("animate-image", results[i].images.fixed_height.url);
 
         // Appending the paragraph and image tag to the resultsDiv
-        resultsDiv.append(p);
         resultsDiv.append(resultsImage);
+        resultsDiv.append(p);
 
         // Prepends resultsDiv to HTML page in the "#gifs" div
         $(".gifs").prepend(resultsDiv);
@@ -59,14 +61,14 @@ $(document).ready(function() {
   // Function for rendering buttons *Whoa*
   function renderButtons() {
     // Removes existing buttons
-    $("#dynBtns").empty();
+    $("#dynamicBtns").empty();
     // Loop for parsing horrorIcon array
     for (var i = 0; i < horrorIcon.length; i++) {
       var Btn = $("<button>");
       Btn.addClass("icon btn");
       Btn.attr("data-name", horrorIcon[i]);
       Btn.text(horrorIcon[i]);
-      $("#dynBtns").append(Btn);
+      $("#dynamicBtns").append(Btn);
     }
   }
   // Calls function renderButtons() to load buttons from existing array.

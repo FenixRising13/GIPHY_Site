@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, AJAX, API" />
 
     <title>GIPHY Site</title>
 
@@ -43,12 +44,15 @@
   </head>
 
   <body>
-    <container>
-      <div id="dynBtns" class="row"></div>
+    <nav class="navbar navbar-nav">
+      <h1>Horror Gifs</h1>
+    </nav>
+    <div class="container">
+      <div id="dynamicBtns" class="row"></div>
 
       <div class="row">
-        <div class="gifs col-xs-7 col-sm-7 col-md-8 col-lg-8"></div>
-        <form action="submit" class="col-xs-5 col-sm-5 col-md-4 col-lg-4">
+        <div class="gifs col-7 col-sm-7 col-md-8 col-lg-8"></div>
+        <form action="submit" class="col-5 col-sm-5 col-md-4 col-lg-4">
           <div class="form-group">
             <label>Type in a Horror Icon</label>
             <input
@@ -65,17 +69,11 @@
 
       <!-- Links app.js -->
       <script src="assets/javascript/app.js"></script>
-    </container>
+    </div>
 
     <footer class="footer">
-      <p class="text-muted text-muted-footer text-center">
-        &copy; Copyright 2018 Mark Powalisz
-        <audio
-          src="assets/music/friday_the_13th.mp3"
-          controls
-          autoplay
-          loop
-        ></audio>
+      <p class="text-center">
+        Published by Mark Powalisz 2020
       </p>
     </footer>
   </body>

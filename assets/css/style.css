@@ -1,58 +1,60 @@
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 body {
-    /* Image from https://subtlepatterns.com */
-    background-image: url("../images/blackorchid.png");
-    display: flex;
-    flex-direction: column;
+  /* Image from https://subtlepatterns.com */
+  background-image: url("../images/blackorchid.png");
+  display: flex;
+  flex-direction: column;
 }
 
-container {
-    flex: 1 0 auto;
+.container {
+  flex: 1 0 auto;
 }
 
-#dynBtns {
-    margin-left: 15px;
-    margin-top: 10px;
+#dynamicBtns {
+  margin-left: 15px;
+  margin-top: 10px;
 }
 
 .icon {
-    margin-left: 5px;
-    margin-bottom: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 
 .btn {
-    background: black;
-    color: white;
-    border: 1px solid red;
+  background: black;
+  color: white;
+  border: 1px solid red;
 }
 
 .form-control {
-    width: 60%;
+  width: 60%;
+}
+
+.rating {
+  color: white;
 }
 
 label {
-    color:white;
-    font-weight: normal;
+  color: white;
+  font-weight: normal;
 }
 
 #submit {
-    background: black;
-    color: white;
-    border: 1px solid red;
+  background: black;
+  color: white;
+  border: 1px solid red;
 }
 
 footer {
-    background: black;
-    border-top: 2px solid red;
-    height: 40px;
-    bottom: 0px;
-    width: 100%;
-    padding: 10px;
-}
-
-audio {
-    float: right;
+  color: white;
+  background: black;
+  border-top: 2px solid red;
+  height: 40px;
+  bottom: 0px;
+  width: 100%;
+  padding: 10px;
 }
