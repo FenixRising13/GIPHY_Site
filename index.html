@@ -1,80 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="keywords" content="HTML, CSS, JavaScript, AJAX, API" />
 
-    <title>GIPHY Site</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="keywords" content="HTML, CSS, JavaScript, AJAX, API" />
 
-    <!-- Reset.css -->
-    <link rel="stylesheet" href="assets/css/reset.css" />
+  <title>GIPHY Site</title>
 
-    <!-- jQuery CDN -->
-    <script
-      src="http://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
+  <!-- Reset.css -->
+  <link rel="stylesheet" href="assets/css/reset.css" />
 
-    <!-- Latest compiled and minified Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <!-- Latest compiled and minified Bootstrap JavaScript -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Latest compiled and minified Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
 
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Latest compiled and minified Bootstrap JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
 
-    <!-- Link style.css -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
 
-  <body>
-    <nav class="navbar navbar-nav">
-      <h1>Horror Gifs</h1>
-    </nav>
-    <div class="container">
-      <div id="dynamicBtns" class="row"></div>
+  <!-- Link style.css -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
-      <div class="row">
-        <div class="gifs col-7 col-sm-7 col-md-8 col-lg-8"></div>
-        <form action="submit" class="col-5 col-sm-5 col-md-4 col-lg-4">
-          <div class="form-group">
-            <label>Type in a Horror Icon</label>
-            <input
-              type="text"
-              class="form-control"
-              id="horror"
-              placeholder="Your greatest fears are here..."
-            />
-          </div>
+<body>
+  <nav class="navbar navbar-nav">
+    <h1>Horror Gifs</h1>
+  </nav>
+  <div class="container">
+    <div id="dynamicBtns" class="row"></div>
 
-          <button type="submit" id="submit" class="btn">Submit</button>
-        </form>
-      </div>
+    <div class="row">
+      <div class="gifs col-7 col-sm-7 col-md-8 col-lg-8"></div>
+      <form action="submit" class="col-5 col-sm-5 col-md-4 col-lg-4">
+        <div class="form-group">
+          <label>Type in a Horror Icon</label>
+          <input type="text" class="form-control" id="horror" placeholder="Your greatest fears are here..." />
+        </div>
 
-      <!-- Links app.js -->
-      <script src="assets/javascript/app.js"></script>
+        <button type="submit" id="submit" class="btn">Submit</button>
+      </form>
     </div>
 
-    <footer class="footer">
-      <p class="text-center">
-        Published by Mark Powalisz 2020
-      </p>
-    </footer>
-  </body>
+    <!-- Links app.js -->
+    <script src="assets/javascript/app.js"></script>
+  </div>
+
+  <footer class="footer">
+    <p class="text-center">
+      Published by Mark Powalisz 2020
+    </p>
+  </footer>
+</body>
+
 </html>
